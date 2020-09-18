@@ -1,3 +1,4 @@
+// new file
 window.onload = function(){
     let initialbus=[
     {
@@ -117,4 +118,3 @@ window.onload = function(){
        
         display(newdata);    // display newdata 
     }
-
