@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question1</title>
+    <style>
+	    *{
+	        margin:0px;
+	        padding:0px;
+	    }
+	    
+	    .data{
+	        font-family:arial;
+	        height:50%;
+	        width:80%;
+	        background-color: #948287;
+	        margin-left: 10%;
+	        margin-top:50px;
+	        padding: 20px;
+	    }
+	    
+	    .table{
+	        width: 100%;
+	        margin-top: 50px;
+	    }
+	    th,td{
+	        height: 40px;
+	        text-align: center;
+            padding: 5px;
+	    }
+        .form{
+            margin-top: 10px;
+        }
+        input{
+            height: 40px;
+            text-indent: 20px;
+            border-color: blueviolet;
+           
+        }
+        button{
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 12px;
+            border-color: black;
+        }
+	</style>
+</head>
+<body>
+    <div class="data">
+        <h1 align=center>Employee Details</h1>
+        <!-- adding rows dynamically by taking input from the user -->
+        <!-- required works only when there is a submit button -->
+        
+        <!-- creating search button -->
+        <div class="form">
+            <input type="text" placeholder="Search Employee" id="search" onkeyup="searchByNameAndCity()"/>
+        </div>
+        <table border="1" class="table" cellspacing="0">
+            <!--thead contains heading of the table-->
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Salary($)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <!--the data inside table goes in table body-->
+            <tbody class="tdata">
+                <!--<tr>-->
+                <!--    <td>abx</td>-->
+                <!--    <td>fs</td>-->
+                <!--    <td>dds</td>-->
+                <!--    <td>cd</td>-->
+                <!--    <td>rw</td>-->
+                <!--</tr>-->
+            </tbody>
+        </table>
+    </div>
+<script src="question.js"></script>
+</body>
+</html>

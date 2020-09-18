@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question1</title>
+    <style>
+	    *{
+	        margin:0px;
+	        padding:0px;
+	    }
+	    
+	    .data{
+	        font-family:arial;
+	        height:50%;
+	        width:80%;
+	        background-color: #948287;
+	        margin-left: 10%;
+	        margin-top:50px;
+	        padding: 20px;
+	    }
+	    
+	    .table{
+	        width: 100%;
+	        margin-top: 50px;
+	    }
+	    th,td{
+	        height: 40px;
+	        text-align: center;
+            padding: 5px;
+	    }
+        .form{
+            margin-top: 10px;
+        }
+        input{
+            height: 40px;
+            text-indent: 20px;
+            border-color: blueviolet;
+           
+        }
+        button{
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 12px;
+            border-color: black;
+        }
+	</style>
+</head>
+<body>
+    <div class="data">
+        <h1 align=center>Employee Details</h1>
+        <!-- adding rows dynamically by taking input from the user -->
+        <!-- required works only when there is a submit button -->
+        <div class="form">
+            <!-- //passing 'event' obj in func to prevent refreshing of the pg -->
+         <form onsubmit="addEntry(event)">
+            <input type="text" required placeholder="Name" id="name" >
+            <input type="text" required placeholder="source" id="source">
+            <input type="text" required placeholder="destination" id="destination">
+            <input type="number" required placeholder="number" id="number">
+            <input type="number" required placeholder="capacity" id="capacity">
+            <button type="submit">Add Bus</button>
+         </form>
+        </div>
+
+        <!-- creating search button -->
+        <div class="form">
+            <input type="text" placeholder="Search Bus" id="search" onkeyup="searchBySourceAndDestination()"/>
+        </div>
+        <table border="1" class="table" cellspacing="0">
+            <!--thead contains heading of the table-->
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Name</th>
+                    <th>Source</th>
+                    <th>destination</th>
+                    <th>Number</th>
+                    <th>Passenger capacity</th>
+                </tr>
+            </thead>
+            <!--the data inside table goes in table body-->
+            <tbody class="tdata">
+                <!--<tr>-->
+                <!--    <td>abx</td>-->
+                <!--    <td>fs</td>-->
+                <!--    <td>dds</td>-->
+                <!--    <td>cd</td>-->
+                <!--    <td>rw</td>-->
+                <!--</tr>-->
+            </tbody>
+        </table>
+    </div>
+<script src="question2.js"></script>
+</body>
+</html>
